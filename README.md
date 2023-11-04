@@ -6,3 +6,4 @@
 - made mysql database in planetscale we can also use any other provider
 - npm i axios -> calls the api in the routes defined in the project
 - npm i react-hot-toast -> displays messages nicely on the webpage for any error/success calls
+- cloudinary for images (npm install next-cloudinary)
