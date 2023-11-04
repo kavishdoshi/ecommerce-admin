@@ -89,7 +89,7 @@ export default function StoreSwitcher({
                                     storeModal.onOpen();
                                 }}>
                                     <PlusCircle className="mr-2 h-5 w-5"/>
-                                        Create Strore
+                                        Create Store
                             </CommandItem>
                         </CommandGroup>
                     </CommandList>
