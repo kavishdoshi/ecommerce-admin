@@ -46,9 +46,13 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
                     </div>
                 ))}
             </div>
-            <CldUploadWidget onUpload={onUpload} uploadPreset="qu85g54r">
+            <CldUploadWidget 
+            onUpload={onUpload} 
+            uploadPreset="qu85g54r"
+            options={{ sources: ["local"] }}>
                 {({open}) => {
-                    const onClick = () => {
+                    const onClick = (e) => {
+                        e.preventDefault();
                         open();
                     }
 
