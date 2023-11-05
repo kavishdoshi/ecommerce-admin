@@ -5,6 +5,7 @@ import { CldUploadWidget } from "next-cloudinary";
 import { Button } from "./button";
 import { ImagePlus, Trash } from "lucide-react";
 import Image from "next/image";
+import toast from "react-hot-toast";
 
 interface ImageUploadProps {
     disabled?: boolean;
@@ -49,7 +50,12 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
             <CldUploadWidget onUpload={onUpload} uploadPreset="zzh4ske1">
                 {({open}) => {
                     const onClick = () => {
-                        open();
+                        try {
+                            open();
+                        } catch (error) {
+                            console.log(error);
+                            toast.error("Something went wrong, please try again later.")
+                        }
                     }
 
                     return (
