@@ -51,7 +51,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
             uploadPreset="qu85g54r"
             options={{ sources: ["local"] }}>
                 {({open}) => {
-                    const onClick = (e) => {
+                    const onClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                         e.preventDefault();
                         open();
                     }
